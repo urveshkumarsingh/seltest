@@ -39,14 +39,14 @@ public class BrowserIntializer extends ExtentReportNG{
 		    	// FirefoxProfile fprofile = new FirefoxProfile();
 		      //   fprofile.setAcceptUntrustedCertificates(true); 
 		      //   fprofile.setAssumeUntrustedCertificateIssuer(false);
-		       System.out.print("os---------!"+os); 
+		       System.out.println("os---------!"+os+appUrl); 
 		      
 		        // Pass fprofile parameter In webdriver to use preferences to download
 		        // file.
 		        driver = new FirefoxDriver();
 						driver.manage().window().maximize();
 		       driver.get(appUrl);
-						System.out.print("ostryrtyrtyrytryr---------!"+os); 
+						System.out.println("ostryrtyrtyrytryr---------!"+os); 
 		       
 
 		      } else if (browser.equalsIgnoreCase("chrome")) {
