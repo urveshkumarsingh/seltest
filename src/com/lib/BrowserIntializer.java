@@ -36,17 +36,15 @@ public class BrowserIntializer extends ExtentReportNG{
 		    try {
 		      if (browser.equalsIgnoreCase("firefox")) {
 		    	  System.setProperty("webdriver.gecko.driver",gecko_driver_linux);
-		    	// FirefoxProfile fprofile = new FirefoxProfile();
-		      //   fprofile.setAcceptUntrustedCertificates(true); 
-		      //   fprofile.setAssumeUntrustedCertificateIssuer(false);
-		       System.out.println("os---------!"+os+appUrl); 
+		    	FirefoxProfile fprofile = new FirefoxProfile();
+		        fprofile.setAcceptUntrustedCertificates(true); 
+		        fprofile.setAssumeUntrustedCertificateIssuer(false);
+		       
 		      
 		        // Pass fprofile parameter In webdriver to use preferences to download
 		        // file.
-		        driver = new FirefoxDriver();
-						driver.manage().window().maximize();
-		       driver.get(appUrl);
-						System.out.println("ostryrtyrtyrytryr---------!"+os); 
+						System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
+		        driver = new FirefoxDriver(fprofile);
 		       
 
 		      } else if (browser.equalsIgnoreCase("chrome")) {
