@@ -73,7 +73,7 @@ public class BrowserIntializer extends ExtentReportNG{
 		  
 	  }
 	  
-	  public static WebDriver driver() {
+	  public WebDriver driver() {
 		    return driver;
 		  }
 	  
