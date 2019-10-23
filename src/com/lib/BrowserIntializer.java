@@ -21,7 +21,7 @@ import com.relevantcodes.extentreports.ExtentReports;
 
 public class BrowserIntializer extends ExtentReportNG{
 	
-	  public static WebDriver driver;
+	  public  WebDriver driver;
 	  public static ExtentReports extent;
 	  public DesiredCapabilities capabilities;
 	  
