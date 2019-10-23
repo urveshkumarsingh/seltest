@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name="SmokeSuite" parallel="tests">
+	<parameter name="browser" value="firefox" />
+	<parameter name="appUrl" value="https://staging.zagg.com/" />
+
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		<listener class-name="com.lib.ExtentReportNG" />
+		<listener class-name="com.lib.TestNGCustomReportListener" />
+		<listener class-name="com.lib.RetryListener" />
+	</listeners>		
+	
+	
+	<test name=" Zagg Smoke ">
+		<parameter name="browser" value="firefox" />
+		<parameter name="appUrl" value="https://staging.zagg.com/" />
+	<classes>
+		<class name="com.lib.BrowserIntializer" />
+		<class name="zagg.accountRegistration.LoginTests" >
+			<methods>			
+				<include name ="loginWithValidCredentials"/>										
+			</methods>
+		</class>
+		
+		 
+		  </classes>
+	</test>
+</suite> 

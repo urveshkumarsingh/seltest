@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name="SmokeSuite" parallel="tests">
+	<parameter name="browser" value="chrome" />
+	<parameter name="appUrl" value="https://staging.zagg.com/" />
+
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		<listener class-name="com.lib.ExtentReportNG" />
+		<listener class-name="com.lib.TestNGCustomReportListener" />
+		<listener class-name="com.lib.RetryListener" />
+	</listeners>	
+
+	
+	
+	<test name="Zagg Auccount Management">
+		<parameter name="browser" value="chrome" />
+		<parameter name="appUrl" value="https://staging.zagg.com/" />
+		<classes>
+			<class name="com.lib.BrowserIntializer" />
+			<class name="zagg.accountRegistration.LoginTests" >
+			<methods>			
+					<!-- <include name = "createNewAccount"/>		
+					<include name = "activateAccountFromGmail"/>	
+					<include name = "confirmUserAccount"/>					
+					<include name = "loginWithInvalidCredentials"/>	 -->
+					<include name = "loginWithValidCredentials"/>	
+					<!-- <include name = "resettingPassword"/>	 -->							
+				</methods>
+			</class>
+			<class name="zagg.prodRegistration.ProductRegistartionTests" />		
+			<class name="zagg.prodRegistration.PRToolTipTests" />	
+			<class name="zagg.accountGeneral.AccountGeneralTests" />
+			<class name="zagg.accountGeneral.RegisteredProducts" />
+			<class name="zagg.accountGeneral.PurchaseHistory" />		
+			<class name="zagg.accountGeneral.NewsSubscriptionTests" />				
+			<class name="zagg.warrantReplacement.WarrantReplacementTests" />	
+			 <class name="zagg.shop.shoppingTests" />						
+			<class name="zagg.prodRegistration.UK_EU_ProductRegistartionTests" />
+			<class name="zagg.shop.UK_ShoppingTests"/>			
+			<class name="zagg.admin.AdminProductRegistration" />	
+			
+			
+		
+					
+					
+			
+			
+
+
+
+		</classes>
+	</test>
+	
+
+
+	
+
+
+</suite> 
