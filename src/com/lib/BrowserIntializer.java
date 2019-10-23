@@ -39,7 +39,7 @@ public class BrowserIntializer extends ExtentReportNG{
 		    	FirefoxProfile fprofile = new FirefoxProfile();
 		        fprofile.setAcceptUntrustedCertificates(true); 
 		        fprofile.setAssumeUntrustedCertificateIssuer(false);
-		       
+		       System.out.print("os---------!"+os); 
 		      
 		        // Pass fprofile parameter In webdriver to use preferences to download
 		        // file.
