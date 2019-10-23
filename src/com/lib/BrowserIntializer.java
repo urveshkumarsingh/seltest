@@ -44,7 +44,7 @@ public class BrowserIntializer extends ExtentReportNG{
 		        // Pass fprofile parameter In webdriver to use preferences to download
 		        // file.
 						System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
-		        driver = new FirefoxDriver(fprofile);
+		        driver = new FirefoxDriver();
 		       
 
 		      } else if (browser.equalsIgnoreCase("chrome")) {
