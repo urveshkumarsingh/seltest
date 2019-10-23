@@ -44,6 +44,7 @@ public class BrowserIntializer extends ExtentReportNG{
 		        // Pass fprofile parameter In webdriver to use preferences to download
 		        // file.
 		        driver = new FirefoxDriver(fprofile);
+						System.out.print("ostryrtyrtyrytryr---------!"+os); 
 		       
 
 		      } else if (browser.equalsIgnoreCase("chrome")) {
