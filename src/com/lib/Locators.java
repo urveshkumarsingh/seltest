@@ -14,7 +14,7 @@ public class Locators {
 				public  int DEFAULT_WAIT_TIME = 180;
 				public  String chrome_driver = projectPath +"/browserDrivers/chromedriver_mac";
 				public  String gecko_driver = projectPath + "/browserDrivers/geckodriver_mac";
-				public  String gecko_driver_linux = projectPath + "/browserDrivers/geckodriver_linux";
+				public  String gecko_driver_linux = "/usr/bin/geckodriver";
 				public String excelFilePath = projectPath + "/attributeData/productDetails.xls";
 
 				public  String appUrl = "https://staging.zagg.com/";                //"https://mcprod.zagg.com/";  //"https://staging.zagg.com/";   //"http://www.zagg.local/";	
